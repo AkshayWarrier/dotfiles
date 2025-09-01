@@ -12,3 +12,4 @@
 - nmtui
 - papirus-icon-theme
 - neovim
+- pavucontrol
