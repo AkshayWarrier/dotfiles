@@ -13,3 +13,4 @@
 - papirus-icon-theme
 - neovim
 - pavucontrol
+- htop
