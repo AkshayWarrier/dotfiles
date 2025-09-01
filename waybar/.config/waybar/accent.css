@@ -1,0 +1,10 @@
+#custom-fedoraicon {
+    color: #cb7012;
+}
+
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+    color: #cb7012;
+}

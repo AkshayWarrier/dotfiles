@@ -1,0 +1,179 @@
+/* -- Global rules -- */
+* {
+  border: none;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: rgba(0,0,0,0);
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* - Genera rules for visible modules -- */
+#custom-fedoraicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#idle_inhibitor,
+#mpris,
+#pulseaudio,
+#pulseaudio_slider,
+#network,
+#battery {
+  color: #ffffff;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
+}
+
+/* Separation to the left */
+#custom-fedoraicon,
+#cpu,
+#idle_inhibitor {
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Separation to the rigth */
+#clock,
+#temperature,
+#battery {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* -- Specific styles -- */
+
+/* Modules left */
+#custom-fedoraicon {
+  font-size: 20px;
+  background: #1c1c1c;
+  padding-right: 10px;
+}
+
+#clock {
+  background: #1c1c1c;
+}
+
+#cpu {
+  background: #1c1c1c;
+}
+
+#memory {
+  background: #1c1c1c;
+}
+
+#disk {
+  background: #1c1c1c;
+}
+
+#temperature {
+  background: #1c1c1c;
+}
+
+#mpris {
+  background: #1c1c1c;
+}
+
+/* Modules center */
+#workspaces {
+  background: #1c1c1c;
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  color: #ffffff;
+  background: transparent;
+  padding: 4px 4px;
+  /* transition: color 0.3s ease, transform 0.3s ease; */
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+/*
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+    color: #89B4FA;    
+}*/
+
+/*
+#workspaces button:hover {
+  color: #89B4FA;
+}
+*/
+
+/* Modules right */
+#taskbar {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0px 5px;
+  margin: 6px 5px;
+}
+
+#taskbar button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+#taskbar button.active {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#taskbar button:hover {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#idle_inhibitor {
+  background: #1c1c1c;
+  padding-right: 15px;
+}
+
+#pulseaudio {
+  color: #ffffff;
+  background: #1c1c1c;
+}
+
+#pulseaudio_slider {
+  color: #1A1826;
+  background: #E8A2AF;
+}
+
+#network {
+  background: #1c1c1c;
+  padding-right: 13px;
+}
+
+#battery {
+  color: #1c1c1c;
+  background: #A6E3A1;
+  padding-right: 15px;
+}
+
+/* === Optional animation === */
+@keyframes blink {
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
+}
+
+@import "accent.css";

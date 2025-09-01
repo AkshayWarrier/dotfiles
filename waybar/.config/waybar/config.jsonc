@@ -1,0 +1,152 @@
+{
+  "layer": "top",
+  "position": "top",
+  "autohide": true,
+  "autohide-blocked": false,
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  /* === Modules Order === */
+  "modules-left": [
+    "custom/fedoraicon",
+    "clock",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature"
+  ],
+  "modules-center": [
+    "sway/workspaces"
+  ],
+  "modules-right": [
+    /* "wlr/taskbar",*/
+    "idle_inhibitor",
+    "mpris",
+    "pulseaudio_slider",
+    "pulseaudio",
+    "network",
+    "battery"
+  ],
+  /* === Modules Left === */
+  "custom/fedoraicon": {
+    "format": "",
+    "on-click": "rofi -show drun -monitor $(swaymsg -t get_outputs | jq -r '.[] | select(.focused).name') -show-icons",
+    "tooltip": false
+  },
+  "clock": {
+    "timezone": "Europe/Berlin",
+    "format": "{:%H:%M %A, %d/%m}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month"
+    }
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "  {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7} {usage:>2}%",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "tooltip": true,
+    "tooltip-format": "CPU Usage: {usage}%\nCores: {cores}",
+    "on-click": "alacritty -e htop"
+  },
+  "memory": {
+    "format": "{percentage}% 󰍛",
+    "tooltip": true,
+    "tooltip-format": "RAM Usage: {used} / {total} ({percentage}%)"
+  },
+  "disk": {
+    "format": "{percentage_used}% ",
+    "tooltip": true,
+    "tooltip-format": "Space Usage: {used} / {total} ({percentage_used}%)"
+  },
+  "temperature": {
+    "format": "{temperatureC}°C {icon}",
+    "tooltip": true,
+    "tooltip-format": "Temperature: {temperatureC}°C",
+    "format-icons": [
+      ""
+    ]
+  },
+  /* === Modules Center === */
+  "sway/workspaces": {
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "*": 2
+    },
+    "disable-scroll": false,
+    "all-outputs": false,
+    "show-special": true
+  },
+  /* === Modules Right === */
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "all-outputs": true,
+    "active-first": true,
+    "tooltip-format": "{name}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+      "rofi"
+    ]
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+ "mpris": {
+    "format": "{status_icon} {title} - {artist}",
+    "format-paused": "{status_icon} <i>{title} - {artist}</i>",
+    "dynamic-len": 20,
+    "player-icons": {
+	    "default": "⏸",
+	    "mpv": "🎵"
+    },
+    "status-icons": {
+	    "paused": "▶",
+	    "playing": "⏸"
+    },
+    "ignored-players": ["firefox", "google-chrome"]
+  },
+  "pulseaudio_slider": {
+    "format": "{volume}%",
+    "tooltip": false,
+    "on-click": "pavucontrol"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": " {format_source}",
+    "format-icons": {
+      "default": [
+        "",
+        ""
+      ]
+    }
+  },
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) 󰤢",
+    "format-ethernet": "󰈀 ",
+    "format-disconnected": "󰤠 ",
+    "interval": 5,
+    "tooltip-format": "{essid} ({signalStrength}%)",
+    "on-click": "nm-connection-editor"
+  },
+  "battery": {
+        "interval": 1,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]  
+   }
+}
