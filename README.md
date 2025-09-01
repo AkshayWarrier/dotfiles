@@ -1,6 +1,6 @@
 # dotfiles
 
-## Essential software and packages
+## Software and Packages
 - sway
 - stow
 - waybar
@@ -11,3 +11,4 @@
 - wdisplays
 - nmtui
 - papirus-icon-theme
+- neovim
