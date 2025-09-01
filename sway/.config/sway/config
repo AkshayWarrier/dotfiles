@@ -28,7 +28,7 @@ set $menu rofi -show drun -monitor $(swaymsg -t get_outputs | jq -r '.[] | selec
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/akshay/Pictures/wall3.jpg fill
+output * bg ~/wallpaper.jpg fill
 #
 # Example configuration:
 #
