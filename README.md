@@ -10,3 +10,4 @@
 - grimshot
 - wdisplays
 - nmtui
+- papirus-icon-theme
