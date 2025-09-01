@@ -84,7 +84,7 @@ with open(waybar_css_path, "w") as f:
 print(f"✅ Updated Waybar color to {accent} in {waybar_css_path}")
 
 # ------------------ Update Rofi colors.rasi ------------------
-rofi_rasi_path = "/home/akshay/.local/share/rofi/themes/shared/colors.rasi"
+rofi_rasi_path = "~/.config/rofi/shared/colors.rasi"
 
 if os.path.exists(rofi_rasi_path):
     with open(rofi_rasi_path, "r") as f:
