@@ -98,15 +98,15 @@
   },
  "mpris": {
     "format": "{status_icon} {title} - {artist}",
-    "format-paused": "{status_icon} <i>{title} - {artist}</i>",
+    /* "format-paused": "{status_icon} <i>{title} - {artist}</i>",*/
     "dynamic-len": 20,
     "player-icons": {
-	    "default": "⏸",
+	    /*"default": "⏸",*/
 	    "mpv": "🎵"
     },
     "status-icons": {
-	    "paused": "▶",
-	    "playing": "⏸"
+	    "paused": "",
+	    "playing": ""
     },
     "ignored-players": ["firefox", "google-chrome"]
   },
