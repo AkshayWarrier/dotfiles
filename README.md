@@ -12,3 +12,6 @@
 - nmtui
 - papirus-icon-theme
 - neovim
+- pavucontrol
+- playerctl
+- htop
