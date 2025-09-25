@@ -286,3 +286,9 @@ exec_always {
 client.focused $accent_bg $accent_bg $accent $accent
 input * xkb_options compose:ralt
 
+# exec sway-yasm daemon --default-keybindings
+# bindsym Mod4+q exec sway-yasm fzf switcher
+bindsym $mod+Control+Shift+Right move workspace to output right
+bindsym $mod+Control+Shift+Left move workspace to output left
+bindsym $mod+Control+Shift+Down move workspace to output down
+bindsym $mod+Control+Shift+Up move workspace to output up
